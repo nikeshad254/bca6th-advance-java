@@ -8,5 +8,6 @@ public class Main {
         System.out.println("Lab4: Mouse Click Paint");
         System.out.println("Lab5: Mouse Press Draw");
         System.out.println("Lab6: Counter");
+        System.out.println("Lab6: Basic DB CRUD opertations");
     }
 }
