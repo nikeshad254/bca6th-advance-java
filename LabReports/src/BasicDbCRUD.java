@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.sql.*;
 
+// Lab 7: Write a program to perform CRUD operation on student table in DB using JDBC.
 public class BasicDbCRUD {
     Connection conn;
     Statement statement;
