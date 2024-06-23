@@ -48,6 +48,9 @@ public class LoginForm {
                     ResultSet rs = statement.executeQuery(query);
 
                     if(rs.next()){
+                        Dashboard dash = new Dashboard();
+                        dash.show();
+                        frame.dispose();
                         jOptionPane.showMessageDialog(null, "You have logged in!");
                     }else{
                         jOptionPane.showMessageDialog(null, "Incorrect username or password");

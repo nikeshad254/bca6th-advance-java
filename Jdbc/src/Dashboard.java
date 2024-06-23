@@ -1,8 +1,7 @@
 import javax.swing.*;
-import javax.swing.table.JTableHeader;
-import javax.swing.text.TableView;
+import javax.swing.table.*;
+import java.awt.*;
 import java.sql.*;
-import java.util.ArrayList;
 
 public class Dashboard {
 
@@ -14,22 +13,30 @@ public class Dashboard {
         return connection;
     }
 
-    public void show() {
+    public void show(){
         JFrame frame = new JFrame("Dashboard");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("id");
+        model.addColumn("username");
+        model.addColumn("password");
 
         try {
             String query = "Select * from student";
             Connection conn = Conn();
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery(query);
-            System.out.println(rs);
 
-            ArrayList<String> al = new ArrayList<>();
-//            al.add();
+            while (rs.next()){
+                model.addRow(new String[]{rs.getString("id"), rs.getString("username"), rs.getString("password")});
+            }
+
             JTable tbl = new JTable();
 
-            frame.add(tbl);
+            tbl.setModel(model);
+            JScrollPane sp=new JScrollPane(tbl);
+            frame.add(sp,BorderLayout.CENTER);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -38,7 +45,6 @@ public class Dashboard {
 
 
 
-        frame.setLayout(null);
         frame.setBounds(100, 300, 500, 500);
         frame.setVisible(true);
 
