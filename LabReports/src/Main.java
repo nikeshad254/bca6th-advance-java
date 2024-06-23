@@ -10,5 +10,6 @@ public class Main {
         System.out.println("Lab6: Counter");
         System.out.println("Lab7: Basic DB CRUD opertations");
         System.out.println("Lab8: Login Student");
+        System.out.println("Lab9: Signup Student");
     }
 }
