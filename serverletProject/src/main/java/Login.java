@@ -25,10 +25,12 @@ public class Login extends HttpServlet {
     }
 
     boolean isUserLoggedIn(String username, String password){
-        String query =  "Select * from student where username='"+username+"' and password='"+password+"'";
+        String query =  "Select * from student where username=? and password=?";
         try {
-            Statement stmt = this.connection.createStatement();
-            ResultSet userExistRs = stmt.executeQuery(query);
+            PreparedStatement stmt = this.connection.prepareStatement(query);
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            ResultSet userExistRs = stmt.executeQuery();
             return userExistRs.next();
         }catch (SQLException e){
             throw new RuntimeException(e);
