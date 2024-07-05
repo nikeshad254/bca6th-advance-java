@@ -7,11 +7,11 @@ public class SignUpForm {
     public static JOptionPane jOptionPane;
 
     public static Connection Conn() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/my_db";
-        String user = "root";
-        String password = "nist254";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        return connection;
+            String url = "jdbc:mysql://localhost:3306/my_db";
+            String user = "root";
+            String password = "nist254";
+            Connection connection = DriverManager.getConnection(url, user, password);
+            return connection;
     }
 
     public static void main(String[] args) {
