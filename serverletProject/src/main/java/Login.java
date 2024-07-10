@@ -1,5 +1,7 @@
 package main.java;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -37,13 +39,17 @@ public class Login extends HttpServlet {
         }
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 //        super.doPost(req, resp);
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
             if(isUserLoggedIn(username, password)){
                 resp.sendRedirect("/serverletProject/success.jsp?uname="+username);
+
+//                req.setAttribute("uname", username);
+//                RequestDispatcher  rd = req.getRequestDispatcher("success.jsp");
+//                rd.forward(req, resp);
             }else{
                 resp.setContentType("text/html");
                 PrintWriter out = resp.getWriter();
