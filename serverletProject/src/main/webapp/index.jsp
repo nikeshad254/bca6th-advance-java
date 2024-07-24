@@ -4,5 +4,6 @@
 <a href="/serverletProject/hello">Hello World!</a><br />
 <a href="/serverletProject/addNum">Add Numbers!</a><br />
 <a href="/serverletProject/login.jsp">Login !</a><br />
+<a href="/serverletProject/cookie.jsp">Cookie !</a><br />
 </body>
 </html>

@@ -31,4 +31,13 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Cookie</servlet-name>
+    <servlet-class>main.java.MyCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cookie</servlet-name>
+    <url-pattern>/cookie</url-pattern>
+  </servlet-mapping>
+
 </web-app>
