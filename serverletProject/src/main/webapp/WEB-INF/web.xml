@@ -39,5 +39,14 @@
     <servlet-name>Cookie</servlet-name>
     <url-pattern>/cookie</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Session</servlet-name>
+    <servlet-class>main.java.MySession</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Session</servlet-name>
+    <url-pattern>/session</url-pattern>
+  </servlet-mapping>
 
 </web-app>
