@@ -5,24 +5,6 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-    <servlet-name>HelloWorld</servlet-name>
-    <servlet-class>main.java.HelloWorld</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HelloWorld</servlet-name>
-    <url-pattern>/hello</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>AddNumbers</servlet-name>
-    <servlet-class>main.java.AddNumbers</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AddNumbers</servlet-name>
-    <url-pattern>/addNum</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
     <servlet-name>Login</servlet-name>
     <servlet-class>main.java.Login</servlet-class>
   </servlet>
@@ -30,23 +12,4 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>Cookie</servlet-name>
-    <servlet-class>main.java.MyCookie</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Cookie</servlet-name>
-    <url-pattern>/cookie</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>Session</servlet-name>
-    <servlet-class>main.java.MySession</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Session</servlet-name>
-    <url-pattern>/session</url-pattern>
-  </servlet-mapping>
-
 </web-app>
